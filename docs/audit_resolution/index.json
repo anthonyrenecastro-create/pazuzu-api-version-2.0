@@ -1,0 +1,626 @@
+[
+  {
+    "id": "S001",
+    "title": "Intersection rule assumes independent failure modes",
+    "classification": "[LOG]",
+    "severity": "high",
+    "subsystem": "S3 Dual Ward / Doctrine",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S002",
+    "title": "No merge protocol for conflicting parallel-stream directives",
+    "classification": "[ARC]",
+    "severity": "high",
+    "subsystem": "Orchestration Pipeline",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S003",
+    "title": "'Threshold, not wall' lacks ROC operating points",
+    "classification": "[MTH]",
+    "severity": "medium",
+    "subsystem": "Doctrine / S3 Dual Ward",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S004",
+    "title": "DPoP prevents replay but not token exfiltration; no mTLS on gateway",
+    "classification": "[SEC]",
+    "severity": "high",
+    "subsystem": "Ingestion Gateway",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S005",
+    "title": "No end-to-end latency budget across 12 stations",
+    "classification": "[PERF]",
+    "severity": "medium",
+    "subsystem": "Orchestration Pipeline",
+    "status": "scheduled"
+  },
+  {
+    "id": "S006",
+    "title": "Grok-as-Protector contradicts v0.5 backfire formalism (Eq 144)",
+    "classification": "[HST]",
+    "severity": "low",
+    "subsystem": "Doctrine / Agent role mapping",
+    "status": "scheduled"
+  },
+  {
+    "id": "S007",
+    "title": "S1-S12 numbering implies mutation while parallel streams imply purity",
+    "classification": "[ALG]",
+    "severity": "medium",
+    "subsystem": "Orchestration Pipeline",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S008",
+    "title": "No schema for merging streaming t-digests across replicas",
+    "classification": "[OBS]",
+    "severity": "medium",
+    "subsystem": "Telemetry / Observability",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S009",
+    "title": "No versioning strategy for pipeline logic itself",
+    "classification": "[API]",
+    "severity": "medium",
+    "subsystem": "Orchestration Pipeline / API",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S010",
+    "title": "'Quarantine' namespace collision between S3 handoff and S11 role",
+    "classification": "[ARC]",
+    "severity": "medium",
+    "subsystem": "S11 (Sanitize/Isolate) / Pipeline routing",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S011",
+    "title": "S1 gating is dense softmax, not noisy top-k MoE routing",
+    "classification": "[ALG]",
+    "severity": "high",
+    "subsystem": "S1 Chimera Gate",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S012",
+    "title": "Undefined standby pool for 'kept warm' experts; 70B cold start is seconds",
+    "classification": "[PERF]",
+    "severity": "high",
+    "subsystem": "S1 Chimera Gate",
+    "status": "scheduled"
+  },
+  {
+    "id": "S013",
+    "title": "Cosine disagreement on hidden states is a poor proxy for contradiction",
+    "classification": "[MTH]",
+    "severity": "medium",
+    "subsystem": "S1 Chimera Gate",
+    "status": "scheduled"
+  },
+  {
+    "id": "S014",
+    "title": "Sub-query decomposition on high discord risks infinite recursion",
+    "classification": "[ALG]",
+    "severity": "high",
+    "subsystem": "S1 Chimera Gate",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S015",
+    "title": "No inference-time fallback if an expert OOMs or crashes",
+    "classification": "[SEC]",
+    "severity": "high",
+    "subsystem": "S1 Chimera Gate",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S016",
+    "title": "pazuzu_s1_gate_entropy insufficient; need per-expert utilization",
+    "classification": "[OBS]",
+    "severity": "medium",
+    "subsystem": "S1 Chimera Gate / Telemetry",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S017",
+    "title": "'Stitch with provenance tags' \u2014 stitching algorithm undefined",
+    "classification": "[ALG]",
+    "severity": "medium",
+    "subsystem": "S1 Chimera Gate",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S018",
+    "title": "Switch-Transformer auxiliary loss coefficient uncalibrated",
+    "classification": "[MTH]",
+    "severity": "low",
+    "subsystem": "S1 Chimera Gate",
+    "status": "scheduled"
+  },
+  {
+    "id": "S019",
+    "title": "Routing uncertainty needs all expert hidden states, breaking sparsity",
+    "classification": "[PERF]",
+    "severity": "medium",
+    "subsystem": "S1 Chimera Gate",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S020",
+    "title": "No endpoint to force-route to a specific expert",
+    "classification": "[API]",
+    "severity": "medium",
+    "subsystem": "S1 Chimera Gate / API",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S021",
+    "title": "'Silent Steward' is verbose, not silent",
+    "classification": "[LOG]",
+    "severity": "low",
+    "subsystem": "S1 Chimera Gate / Terminology",
+    "status": "scheduled"
+  },
+  {
+    "id": "S022",
+    "title": "'Chimera' implies fusion; MoE is temporal switching",
+    "classification": "[HST]",
+    "severity": "low",
+    "subsystem": "S1 Chimera Gate / Terminology",
+    "status": "scheduled"
+  },
+  {
+    "id": "S023",
+    "title": "60 macro-blocks of 512 tokens caps context at 30,720 tokens",
+    "classification": "[MTH]",
+    "severity": "high",
+    "subsystem": "S2 Sexagesimal Turn",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S024",
+    "title": "Sparse bridge attention every 6th block is static",
+    "classification": "[ALG]",
+    "severity": "medium",
+    "subsystem": "S2 Sexagesimal Turn",
+    "status": "scheduled"
+  },
+  {
+    "id": "S025",
+    "title": "Rolling archive summarization is lossy with no KL retention guarantee",
+    "classification": "[PERF]",
+    "severity": "medium",
+    "subsystem": "S2 Sexagesimal Turn",
+    "status": "scheduled"
+  },
+  {
+    "id": "S026",
+    "title": "Bridge-attention retrieval inverts the memory-fetch compute order",
+    "classification": "[ALG]",
+    "severity": "high",
+    "subsystem": "S2 Sexagesimal Turn",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S027",
+    "title": "Retention probability assumes exponential (memoryless) decay",
+    "classification": "[MTH]",
+    "severity": "medium",
+    "subsystem": "S2 Sexagesimal Turn",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S028",
+    "title": "Retention probe is offline-only (needle-in-haystack)",
+    "classification": "[OBS]",
+    "severity": "medium",
+    "subsystem": "S2 Sexagesimal Turn / Telemetry",
+    "status": "scheduled"
+  },
+  {
+    "id": "S029",
+    "title": "No page-fault handling for KV-cache tier migration races",
+    "classification": "[PERF]",
+    "severity": "high",
+    "subsystem": "S2 Sexagesimal Turn",
+    "status": "scheduled"
+  },
+  {
+    "id": "S030",
+    "title": "Rotation counter increment unit is undefined",
+    "classification": "[ALG]",
+    "severity": "high",
+    "subsystem": "S2 Sexagesimal Turn",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S031",
+    "title": "Ring closure vs cylinder topology for block 1/block 60",
+    "classification": "[HST]",
+    "severity": "low",
+    "subsystem": "S2 Sexagesimal Turn / Terminology",
+    "status": "scheduled"
+  },
+  {
+    "id": "S032",
+    "title": "'6\u00b0 bridge' is geometric numerology",
+    "classification": "[HST]",
+    "severity": "low",
+    "subsystem": "S2 Sexagesimal Turn / Terminology",
+    "status": "scheduled"
+  },
+  {
+    "id": "S033",
+    "title": "Summarizing oldest blocks needs an auxiliary model call (latency spike)",
+    "classification": "[PERF]",
+    "severity": "medium",
+    "subsystem": "S2 Sexagesimal Turn",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S034",
+    "title": "No API to pin a macro-block against rotation",
+    "classification": "[API]",
+    "severity": "medium",
+    "subsystem": "S2 Sexagesimal Turn / API",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S035",
+    "title": "Watcher 4-axis scores are uncalibrated LLM judgments",
+    "classification": "[ALG]",
+    "severity": "high",
+    "subsystem": "S3 Dual Ward",
+    "status": "scheduled"
+  },
+  {
+    "id": "S036",
+    "title": "Async Watcher emits before it can reject (cannot unsay tokens)",
+    "classification": "[PERF]",
+    "severity": "high",
+    "subsystem": "S3 Dual Ward",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S037",
+    "title": "Compromised Keeper can report high confidence to bypass deep reasoning",
+    "classification": "[SEC]",
+    "severity": "high",
+    "subsystem": "S3 Dual Ward",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S038",
+    "title": "min(axes) >= 0.75 strict conjunction is brittle",
+    "classification": "[MTH]",
+    "severity": "medium",
+    "subsystem": "S3 Dual Ward",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S039",
+    "title": "Single regeneration with tightened temperature yields refusals",
+    "classification": "[ALG]",
+    "severity": "medium",
+    "subsystem": "S3 Dual Ward",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S040",
+    "title": "Failover to DeepSeek violates p99 SLOs (R1 chain-of-thought too slow)",
+    "classification": "[PERF]",
+    "severity": "high",
+    "subsystem": "S3 Dual Ward",
+    "status": "scheduled"
+  },
+  {
+    "id": "S041",
+    "title": "'Watermarked ward:degraded' is spoofable with a public schema",
+    "classification": "[SEC]",
+    "severity": "medium",
+    "subsystem": "S3 Dual Ward / API",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S042",
+    "title": "Audit-distribution drift detection misses spaced-out Byzantine poisoning",
+    "classification": "[ALG]",
+    "severity": "high",
+    "subsystem": "S3 Dual Ward",
+    "status": "scheduled"
+  },
+  {
+    "id": "S043",
+    "title": "Failover violates the core intersection law ('Keeper speaks alone')",
+    "classification": "[LOG]",
+    "severity": "high",
+    "subsystem": "S3 Dual Ward / Doctrine",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S044",
+    "title": "False-reject rate uncomputable without human override labels",
+    "classification": "[OBS]",
+    "severity": "medium",
+    "subsystem": "S3 Dual Ward / Telemetry",
+    "status": "scheduled"
+  },
+  {
+    "id": "S045",
+    "title": "250ms Watcher budget unrealistic for R1 chain-of-thought",
+    "classification": "[PERF]",
+    "severity": "medium",
+    "subsystem": "S3 Dual Ward",
+    "status": "scheduled"
+  },
+  {
+    "id": "S046",
+    "title": "Pazuzu and Lamashtu are enemies, not independent auditors",
+    "classification": "[HST]",
+    "severity": "low",
+    "subsystem": "S3 Dual Ward / Terminology",
+    "status": "not_applicable"
+  },
+  {
+    "id": "S047",
+    "title": "Medoid selection is O(N^2) over the embedding distance matrix",
+    "classification": "[ALG]",
+    "severity": "medium",
+    "subsystem": "S4 Swarm Agreement",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S048",
+    "title": "Speculative branches need 3-5x duplicate KV caches, unaccounted",
+    "classification": "[PERF]",
+    "severity": "high",
+    "subsystem": "S4 Swarm Agreement",
+    "status": "scheduled"
+  },
+  {
+    "id": "S049",
+    "title": "'Tie-break by Watcher score' couples S4 to S3, breaking parallelism",
+    "classification": "[ALG]",
+    "severity": "high",
+    "subsystem": "S4 Swarm Agreement / Pipeline",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S050",
+    "title": "Replay endpoint leaks routing thresholds to binary-search attackers",
+    "classification": "[SEC]",
+    "severity": "high",
+    "subsystem": "S4 Swarm Agreement / API",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S051",
+    "title": "Aligned-cluster scoring equates consensus with truth",
+    "classification": "[MTH]",
+    "severity": "medium",
+    "subsystem": "S4 Swarm Agreement",
+    "status": "scheduled"
+  },
+  {
+    "id": "S052",
+    "title": "Spec claims both 'wait-for-all' and 'early-exit'",
+    "classification": "[ALG]",
+    "severity": "medium",
+    "subsystem": "S4 Swarm Agreement",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S053",
+    "title": "Lost clusters not tracked; needed for offline S1 re-weighting",
+    "classification": "[OBS]",
+    "severity": "low",
+    "subsystem": "S4 Swarm Agreement / Telemetry",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S054",
+    "title": "No self-consistency check within consensus fan-out",
+    "classification": "[ALG]",
+    "severity": "medium",
+    "subsystem": "S4 Swarm Agreement",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S055",
+    "title": "Replay determinism impossible across heterogeneous GPU nodes",
+    "classification": "[ALG]",
+    "severity": "medium",
+    "subsystem": "S4 Swarm Agreement / API",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S056",
+    "title": "/v1/swarm is non-streaming only; no progressive consensus",
+    "classification": "[API]",
+    "severity": "low",
+    "subsystem": "S4 Swarm Agreement / API",
+    "status": "scheduled"
+  },
+  {
+    "id": "S057",
+    "title": "Divergence on discrete embeddings is noisy in high-D space",
+    "classification": "[MTH]",
+    "severity": "medium",
+    "subsystem": "S5 Vector Current",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S058",
+    "title": "Curl |\u2207\u00d7v| is undefined for embeddings with d >> 3",
+    "classification": "[MTH]",
+    "severity": "high",
+    "subsystem": "S5 Vector Current",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S059",
+    "title": "Re-anchoring on divergence can frustrate legitimate topic pivots",
+    "classification": "[ALG]",
+    "severity": "medium",
+    "subsystem": "S5 Vector Current",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S060",
+    "title": "Embedding every segment on the critical path costs 5-10ms/token",
+    "classification": "[PERF]",
+    "severity": "high",
+    "subsystem": "S5 Vector Current",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S061",
+    "title": "Pairwise cross products assume orientation; embedding spaces are orientation-ambiguous",
+    "classification": "[MTH]",
+    "severity": "medium",
+    "subsystem": "S5 Vector Current",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S062",
+    "title": "Live quiver-plot dashboard needs prohibitive t-SNE/UMAP compute",
+    "classification": "[OBS]",
+    "severity": "medium",
+    "subsystem": "S5 Vector Current / Dashboard",
+    "status": "scheduled"
+  },
+  {
+    "id": "S063",
+    "title": "Divergence is measured post-emission: correction, not prevention",
+    "classification": "[ALG]",
+    "severity": "high",
+    "subsystem": "S5 Vector Current",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S064",
+    "title": "Embedding trajectory exposure aids adversarial prompt optimization",
+    "classification": "[SEC]",
+    "severity": "high",
+    "subsystem": "S5 Vector Current / API",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S065",
+    "title": "No hierarchy defined when S5 drift and S10 fracture both trigger",
+    "classification": "[LOG]",
+    "severity": "medium",
+    "subsystem": "S5 Vector Current / S10 / Pipeline",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S066",
+    "title": "GET /v1/field exposes raw diagnostics with no auth scope",
+    "classification": "[API]",
+    "severity": "high",
+    "subsystem": "S5 Vector Current / API Gateway",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S067",
+    "title": "Re-anchoring assumes archive blocks are topically relevant",
+    "classification": "[ALG]",
+    "severity": "low",
+    "subsystem": "S5 Vector Current / S2 Sexagesimal Turn",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S068",
+    "title": "'Wind field map' breaks the fluid-dynamics analogy (no conservation)",
+    "classification": "[HST]",
+    "severity": "low",
+    "subsystem": "S5 Vector Current / Terminology",
+    "status": "scheduled"
+  },
+  {
+    "id": "S069",
+    "title": "PD controller derivative term on discrete entropy causes hunting",
+    "classification": "[ALG]",
+    "severity": "medium",
+    "subsystem": "S6 Thermodynamic Brake",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S070",
+    "title": "Low entropy on deterministic prompts misread as mode collapse",
+    "classification": "[MTH]",
+    "severity": "medium",
+    "subsystem": "S6 Thermodynamic Brake",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S071",
+    "title": "Tightening nucleus top-p alongside temperature is redundant",
+    "classification": "[ALG]",
+    "severity": "low",
+    "subsystem": "S6 Thermodynamic Brake",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S072",
+    "title": "Anti-windup clip is post-hoc; true anti-windup needs back-calculation",
+    "classification": "[PERF]",
+    "severity": "medium",
+    "subsystem": "S6 Thermodynamic Brake",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S073",
+    "title": "No telemetry for controller stability (gain/phase margin)",
+    "classification": "[OBS]",
+    "severity": "low",
+    "subsystem": "S6 Thermodynamic Brake / Telemetry",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S074",
+    "title": "Sliding entropy window is fixed size regardless of generation type",
+    "classification": "[ALG]",
+    "severity": "low",
+    "subsystem": "S6 Thermodynamic Brake",
+    "status": "scheduled"
+  },
+  {
+    "id": "S075",
+    "title": "Target entropy H* is static; ideal entropy is context-dependent",
+    "classification": "[MTH]",
+    "severity": "medium",
+    "subsystem": "S6 Thermodynamic Brake",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S076",
+    "title": "Attacker can force the controller into a high-entropy token-exhaustion loop",
+    "classification": "[SEC]",
+    "severity": "high",
+    "subsystem": "S6 Thermodynamic Brake",
+    "status": "implemented_unverified"
+  },
+  {
+    "id": "S077",
+    "title": "'Entropy governor' governs only the sampling distribution",
+    "classification": "[LOG]",
+    "severity": "low",
+    "subsystem": "S6 Thermodynamic Brake / Terminology",
+    "status": "scheduled"
+  },
+  {
+    "id": "S078",
+    "title": "'Thermodynamics' metaphor is false (source truncated)",
+    "classification": "[HST]",
+    "severity": "low",
+    "subsystem": "S6 Thermodynamic Brake / Terminology",
+    "status": "scheduled"
+  }
+]
