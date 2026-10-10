@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pazuzu-contracts"
+version = "2.0.0"
+description = "Shared contracts for PAZUZU-API v2.0"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pazuzu_contracts*"]
