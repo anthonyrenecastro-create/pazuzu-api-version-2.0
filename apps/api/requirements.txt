@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic>=2
+httpx
+python-jose[cryptography]
+redis
+asyncpg
+alembic
+prometheus-client
+python-multipart
